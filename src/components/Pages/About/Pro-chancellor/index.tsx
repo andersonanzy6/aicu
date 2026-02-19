@@ -22,7 +22,7 @@ const ProChancellor = () => {
             {/* Image of the President */}
             <div className="flex justify-center">
                <img
-                  src="/new/n-11.jpg"
+                  src="/new/president-aicu.jpeg"
                   alt="President"
                   className="w-[80%] h-auto rounded-lg shadow-lg"
                />

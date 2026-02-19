@@ -9,12 +9,14 @@ const CoreValues = () => {
       {
          title: "Passion",
          content: (
-            <p>
-               <strong>
-                  Our sovereign Lord, Jesus the Christ, has called us individually and collectively
-                  to love our God and to love our neighbors as ourselves—above all else. To that
-                  end, we, the board, faculty, and staff of AICU:
-               </strong>
+            <>
+               <p>
+                  <strong>
+                     Our sovereign Lord, Jesus the Christ, has called us individually and collectively
+                     to love our God and to love our neighbors as ourselves—above all else. To that
+                     end, we, the board, faculty, and staff of AICU:
+                  </strong>
+               </p>
                <ul className="list-decimal ml-6 mt-2">
                   <li>
                      Commit to pursuing our work together with the passion that comes from
@@ -40,7 +42,7 @@ const CoreValues = () => {
                      AICU.
                   </li>
                </ul>
-            </p>
+            </>
          ),
       },
       {

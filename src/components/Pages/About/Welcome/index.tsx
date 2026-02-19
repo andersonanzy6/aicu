@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import PresidentImage from "../../../../../public/about/president.jpg";
+import PresidentImage from "../../../../../public//new/president-aicu.jpeg";
 import WelcomeImage from "../../../../../public/about/welcome-bg.jpg";
 import HeaderPage from "@/components/Shared/HeaderPage";
 

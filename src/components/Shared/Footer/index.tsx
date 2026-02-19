@@ -4,31 +4,31 @@ import React from "react";
 // Footer data
 const footerData = {
    about: [
+      { title: "About AICU", link: "/about" },
       { title: "Our Mission", link: "/about/mission" },
       { title: "Our History", link: "/about/history" },
       { title: "AICU at a Glance", link: "/about/at-a-glance" },
       { title: "Board of Trustees", link: "/about/board-of-trustees" },
-      { title: "Accreditation", link: "/about/accreditation" },
    ],
    admissions: [
-      { title: "Requirements for Admission", link: "/admissions/how-to-apply" },
-      { title: "How To Apply", link: "/admissions/requirements-for-admission" },
-      { title: "International Students Guide", link: "#" },
+      { title: "Admissions Hub", link: "/admissions" },
+      { title: "How To Apply", link: "/admissions/how-to-apply" },
+      { title: "Requirements for Admission", link: "/admissions/requirements-for-admission" },
       { title: "Tuition & Fees", link: "/admissions/tuition-fees" },
-      { title: "Financial Aid", link: "/financial/aid" },
+      { title: "Financial Aid", link: "/admissions/financial-aid" },
    ],
    academicResources: [
-      { title: "Undergraduate Programs", link: "/academics/graduate-programs" },
-      { title: "Graduate Programs", link: "#" },
-      { title: "Master's Degrees", link: "#" },
-      { title: "Doctoral Programs", link: "#" },
-      { title: "Course Catalog", link: "#" },
+      { title: "Undergraduate Programs", link: "/academics" },
+      { title: "Graduate Programs", link: "/academics" },
+      { title: "Master's Degrees", link: "/academics" },
+      { title: "Doctoral Programs", link: "/academics" },
+      { title: "Faculty Directory", link: "/faculty" },
    ],
    quickLinks: [
-      { title: "Career Services", link: "#" },
-      { title: "Transfer Credit", link: "#" },
-      { title: "Transcript Request", link: "#" },
-      { title: "Apply Now", link: "#", button: true },
+      { title: "News & Blog", link: "/news" },
+      { title: "Support AICU", link: "/support-us" },
+      { title: "Search", link: "/search" },
+      { title: "Apply Now", link: "/apply", button: true },
    ],
    contact: {
       address: "Columbia Sc Usa Office 1201 Main Columbia Sc 39201. Suite 1989",
@@ -200,13 +200,19 @@ const Footer = () => {
                {/* Privacy and Contact Links */}
                <div className="flex space-x-4 mt-4">
                   <a
-                     href="#"
+                     href="/privacy"
                      className="text-gray-400 hover:text-white"
                   >
-                     Privacy/Terms
+                     Privacy Policy
                   </a>
                   <a
-                     href="#"
+                     href="/terms"
+                     className="text-gray-400 hover:text-white"
+                  >
+                     Terms of Service
+                  </a>
+                  <a
+                     href="/contact"
                      className="text-gray-400 hover:text-white"
                   >
                      Contact Us

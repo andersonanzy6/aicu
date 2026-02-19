@@ -270,6 +270,27 @@ const Header = () => {
                      >
                         ALUMNI
                      </Link>
+
+                     <Link
+                        href="/news"
+                        className="flex items-center text-[15px] text-[#003399] hover:text-blue-700"
+                     >
+                        NEWS
+                     </Link>
+
+                     <Link
+                        href="/search"
+                        className="flex items-center text-[15px] text-[#003399] hover:text-blue-700"
+                     >
+                        SEARCH
+                     </Link>
+
+                     <Link
+                        href="/support-us"
+                        className="flex items-center text-[15px] text-[#003399] hover:text-blue-700"
+                     >
+                        SUPPORT
+                     </Link>
                   </nav>
 
                   {/* Apply Button */}
@@ -346,6 +367,24 @@ const Header = () => {
                            className="px-4 py-3 text-blue-900 hover:bg-blue-50 border-t"
                         >
                            ALUMNI
+                        </Link>
+                        <Link
+                           href="/news"
+                           className="px-4 py-3 text-blue-900 hover:bg-blue-50 border-t"
+                        >
+                           NEWS & BLOG
+                        </Link>
+                        <Link
+                           href="/search"
+                           className="px-4 py-3 text-blue-900 hover:bg-blue-50 border-t"
+                        >
+                           SEARCH
+                        </Link>
+                        <Link
+                           href="/support-us"
+                           className="px-4 py-3 text-blue-900 hover:bg-blue-50 border-t"
+                        >
+                           SUPPORT AICU
                         </Link>
 
                         {/* Apply Button */}

@@ -20,7 +20,7 @@ const OurChancellor = () => {
             {/* Image of the President */}
             <div className="flex justify-center">
                <img
-                  src="/about/president.jpg"
+                  src="/new/president-aicu.jpeg"
                   alt="President"
                   className="w-[80%] h-auto rounded-lg shadow-lg"
                />

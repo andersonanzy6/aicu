@@ -14,7 +14,7 @@ export const aboutDropdownContent = {
       { label: "Board of Trustees", href: "/about/board-of-trustees" },
    ],
    MEDIA: [
-      // { label: "News and Events", href: "/media/news" },
+      { label: "News & Blog", href: "/news" },
       { label: "Photo Gallery", href: "/photo-gallery" },
    ],
 };
@@ -120,18 +120,22 @@ export const otherNavItems = [
    {
       label: "ADMISSIONS",
       items: [
-         { label: "Apply Now", href: "/admissions/apply" },
-         { label: "Tuition & Aid", href: "/admissions/tuition" },
-         // ... other items
+         { label: "Apply Now", href: "/apply" },
+         { label: "Admissions Hub", href: "/admissions" },
       ],
    },
    {
       label: "FACULTY",
       items: [
-         { label: "Apply Now", href: "/admissions/apply" },
-         { label: "Tuition & Aid", href: "/admissions/tuition" },
-         // ... other items
+         { label: "Faculty Directory", href: "/faculty" },
       ],
    },
-   // ... other nav sections
+   {
+      label: "MORE",
+      items: [
+         { label: "News & Blog", href: "/news" },
+         { label: "Support AICU", href: "/support-us" },
+         { label: "Search", href: "/search" },
+      ],
+   },
 ];
