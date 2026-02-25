@@ -1,121 +1,84 @@
 "use client";
 import React from "react";
 import HeaderPage from "@/components/Shared/HeaderPage";
-import Link from "next/link";
-import { Calendar, Image } from "lucide-react";
-
-interface Album {
-   year: number;
-   title: string;
-   description: string;
-   image: string;
-   eventType: string;
-}
+import { Image as ImageIcon } from "lucide-react";
+import LightboxGallery from "@/components/Pages/Gallery/LightboxGallery";
+import YouTubeEmbed from "@/components/Pages/Gallery/YouTubeEmbed";
 
 const PhotoGalleryPage = () => {
-   const albums: Album[] = [
-      {
-         year: 2025,
-         title: "Graduation Ceremony May 2025",
-         description: "Celebrating the accomplishments of our graduates",
-         image: "/photogallery/2024/photo-55%20(1).jpg",
-         eventType: "Graduation",
-      },
-      {
-         year: 2024,
-         title: "Graduation Ceremony 2024",
-         description: "Celebrating the accomplishments of our graduates",
-         image: "/photogallery/2024/photo-55%20(2).jpg",
-         eventType: "Graduation",
-      },
-      {
-         year: 2023,
-         title: "Graduation Ceremony 2023",
-         description: "A memorable celebration of achievement",
-         image: "/photogallery/2024/photo-55%20(3).jpg",
-         eventType: "Graduation",
-      },
-      {
-         year: 2022,
-         title: "Graduation Ceremony 2022",
-         description: "Honoring our class of 2022",
-         image: "/photogallery/2024/photo-55%20(4).jpg",
-         eventType: "Graduation",
-      },
+   const galleryImages = [
+      { src: "/new/media.png", alt: "AICU Media 1", title: "Campus Moments" },
+      { src: "/new/media1.png", alt: "AICU Media 2", title: "Student Life" },
+      { src: "/new/media2.png", alt: "AICU Media 3", title: "Academic Excellence" },
+      { src: "/new/media3.png", alt: "AICU Media 4", title: "Ceremony Highlights" },
+      { src: "/new/media4.png", alt: "AICU Media 5", title: "Graduation 2024" },
+      { src: "/new/media5.png", alt: "AICU Media 6", title: "Campus View" },
+      { src: "/new/media6.png", alt: "AICU Media 7", title: "Student Activities" },
+      { src: "/new/media7.png", alt: "AICU Media 8", title: "AICU Events" },
+      { src: "/new/media8.png", alt: "AICU Media 9", title: "Community Moments" },
+      { src: "/new/media9.png", alt: "AICU Media 10", title: "AICU Leadership" },
+      { src: "/new/media10.png", alt: "AICU Media 11", title: "Celebration" },
+      { src: "/new/media11.png", alt: "AICU Media 12", title: "Academic Support" },
+      { src: "/new/media12.png", alt: "AICU Media 13", title: "Student Success" },
+      { src: "/new/media13.png", alt: "AICU Media 13", title: "Student Success" },
+      { src: "/new/media14.png", alt: "AICU Media 13", title: "Student Success" },
+      { src: "/new/media15.png", alt: "AICU Media 13", title: "Student Success" },
+   ];
+
+   const youtubeVideos = [
+      { id: "RQGkgVgHkug", title: "Graduation Ceremony Highlights" },
+      { id: "488Z_rVQDZc", title: "AICU Campus Life" },
+      { id: "WfG5c3MAicc", title: "Student Testimonials & Excellence" },
    ];
 
    return (
       <>
-         <title>AICU | Photo Gallery</title>
+         <title>AICU | Photo & Video Gallery</title>
          <HeaderPage
-            text="Photo Gallery"
+            text="Photo & Video Gallery"
             image="/about/mission-eleven.jpg"
          />
 
          <div className="max-w-7xl mx-auto py-16 px-4">
             {/* Introduction */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
                <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-                  Browse our collection of photos capturing memorable moments from AICU events, 
-                  ceremonies, and campus life.
+                  Explore our vibrant campus life through our curated collection of photos and videos.
+                  Capturing the spirit, excellence, and memorable moments at AICU.
                </p>
             </div>
 
-            {/* Albums Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-               {albums.map((album) => (
-                  <Link
-                     key={album.year}
-                     href={`/graduation-photos/${album.year}`}
-                  >
-                     <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group cursor-pointer">
-                        {/* Album Image */}
-                        <div className="relative h-56 overflow-hidden bg-gray-200">
-                           <img
-                              src={album.image}
-                              alt={album.title}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                           />
-                           <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
-                        </div>
+            {/* Photo Gallery Section */}
+            <div className="mb-24">
+               <div className="flex items-center justify-between mb-10">
+                  <h2 className="text-3xl font-bold text-gray-800 flex items-center">
+                     <ImageIcon className="mr-3 text-[#4169E1]" />
+                     Photo Highlights
+                  </h2>
+                  <div className="h-1 flex-1 bg-gray-100 ml-6 hidden md:block"></div>
+               </div>
 
-                        {/* Album Info */}
-                        <div className="p-6">
-                           {/* Event Type Badge */}
-                           <div className="mb-3">
-                              <span className="inline-block bg-[#4169E1] text-white text-xs font-semibold px-3 py-1 rounded-full">
-                                 {album.eventType}
-                              </span>
-                           </div>
-
-                           {/* Year */}
-                           <div className="flex items-center text-gray-600 text-sm mb-2">
-                              <Calendar className="w-4 h-4 mr-2" />
-                              {album.year}
-                           </div>
-
-                           {/* Title */}
-                           <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-[#4169E1] transition-colors">
-                              {album.title}
-                           </h3>
-
-                           {/* Description */}
-                           <p className="text-gray-600 text-sm mb-4">
-                              {album.description}
-                           </p>
-
-                           {/* View Button */}
-                           <div className="flex items-center text-[#4169E1] font-semibold group-hover:translate-x-1 transition-transform">
-                              <Image className="w-4 h-4 mr-2" />
-                              View Album →
-                           </div>
-                        </div>
-                     </div>
-                  </Link>
-               ))}
+               <LightboxGallery images={galleryImages} />
             </div>
 
-            {/* Featured Section */}
+            {/* Video Highlights Section */}
+            <div className="mb-24">
+               <div className="flex items-center justify-between mb-10">
+                  <h2 className="text-3xl font-bold text-gray-800">Video Highlights</h2>
+                  <div className="h-1 flex-1 bg-gray-100 ml-6 hidden md:block"></div>
+               </div>
+
+               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  {youtubeVideos.map((video) => (
+                     <div key={video.id} className="space-y-4">
+                        <YouTubeEmbed videoId={video.id} title={video.title} height="250" />
+                        <h3 className="text-lg font-bold text-gray-800 px-2">{video.title}</h3>
+                     </div>
+                  ))}
+               </div>
+            </div>
+
+            {/* CTA Section */}
             <div className="bg-gradient-to-r from-[#4169E1] to-indigo-600 text-white rounded-lg p-12 text-center">
                <h2 className="text-3xl font-bold mb-4">Share Your Memories</h2>
                <p className="mb-6 text-lg max-w-2xl mx-auto">
