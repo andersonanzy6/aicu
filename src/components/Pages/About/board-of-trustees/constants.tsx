@@ -1,21 +1,21 @@
 export const boardMembers = [
    {
       name: "Dr. Douglas Barnett",
-      position: "Board Chairman",
+      position: "Senior Advisor",
       title: "Professor of Pharmaceutics",
       organization: "Howard University, Washington DC",
       image: "/new/n-5.jpg",
    },
    {
       name: "Dr. Longinus O Agor MD",
-      position: "Member",
+      position: "Deputy Chancellor",
       title: "Regional Pastor",
       organization: "RCCG, The Americas 1 Region 6, Chapel of Restoration, New York NY",
       image: "/new/n-7.jpg",
    },
    {
       name: "Dr. Olusegun Edward Ojo",
-      position: "President",
+      position: "Chancellor",
       title: "",
       organization: "",
       image: "/new/n-8.jpg",
@@ -34,13 +34,13 @@ export const boardMembers = [
       organization: "Wake Forest Baptist Medical Center, Winston-Salem, NC",
       image: "/new/n-10.jpg",
    },
-   // {
-   //    name: "Dr. Akinsanya Adubi",
-   //    position: "Member",
-   //    title: "Senior Pastor",
-   //    organization: "The Redeemed Christian Church of God, Jesus Palace, Maryland USA",
-   //    image: "/about/bo6.jpg",
-   // },
+   {
+      name: "Dr. Tunde Aborisade",
+      position: "Bursar",
+      title: "Senior Pastor",
+      organization: "The Redeemed Christian Church of God, Jesus Palace, Maryland USA",
+      image: "/new/dr-tunde.jpeg",
+   },
    // {
    //    name: "Pastor Adeyinka Somotun",
    //    position: "Member",
